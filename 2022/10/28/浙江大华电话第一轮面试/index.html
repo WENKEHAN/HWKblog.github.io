@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>浙江大华电话第一轮面试 | 柯西HOME</title><meta name="author" content="kexi"><meta name="copyright" content="kexi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="C++的基础知识1·多态 什么是多态-多态就是同一类事务的不同表表现形式，比如说汽车是一个大类，那么下面他又不同的型号，不同的品牌的汽车  多态实现的三个必要条件  继承–派生类继承基类 重写、虚函数 父类的引用或者指针–指向派生类的对象   虚函数  存在一个虚函数表，虚函数表保存在.rodata段，只读数据段  每个对象的头部都保存了一个虚表指针，指向虚函数的地址  虚指针保存在什么地方，保存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浙江大华电话第一轮面试">
+<meta property="og:url" content="http://wenkehan.github.io/2022/10/28/%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%8D%8E%E7%94%B5%E8%AF%9D%E7%AC%AC%E4%B8%80%E8%BD%AE%E9%9D%A2%E8%AF%95/index.html">
+<meta property="og:site_name" content="柯西HOME">
+<meta property="og:description" content="C++的基础知识1·多态 什么是多态-多态就是同一类事务的不同表表现形式，比如说汽车是一个大类，那么下面他又不同的型号，不同的品牌的汽车  多态实现的三个必要条件  继承–派生类继承基类 重写、虚函数 父类的引用或者指针–指向派生类的对象   虚函数  存在一个虚函数表，虚函数表保存在.rodata段，只读数据段  每个对象的头部都保存了一个虚表指针，指向虚函数的地址  虚指针保存在什么地方，保存">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-27T16:18:00.000Z">
+<meta property="article:modified_time" content="2022-10-27T16:25:04.251Z">
+<meta property="article:author" content="kexi">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://wenkehan.github.io/2022/10/28/%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%8D%8E%E7%94%B5%E8%AF%9D%E7%AC%AC%E4%B8%80%E8%BD%AE%E9%9D%A2%E8%AF%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '浙江大华电话第一轮面试',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-28 00:25:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">柯西HOME</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">浙江大华电话第一轮面试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-27T16:18:00.000Z" title="发表于 2022-10-28 00:18:00">2022-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-27T16:25:04.251Z" title="更新于 2022-10-28 00:25:04">2022-10-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%A2%E7%BB%8F/">面经</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="浙江大华电话第一轮面试"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h1 id="C-的基础知识"><a href="#C-的基础知识" class="headerlink" title="C++的基础知识"></a>C++的基础知识</h1><h2 id="1·多态"><a href="#1·多态" class="headerlink" title="1·多态"></a>1·多态</h2><ol>
+<li><p>什么是多态-多态就是同一类事务的不同表表现形式，比如说汽车是一个大类，那么下面他又不同的型号，不同的品牌的汽车</p>
+</li>
+<li><p>多态实现的三个必要条件</p>
+<ol>
+<li>继承–派生类继承基类</li>
+<li>重写、虚函数</li>
+<li>父类的引用或者指针–指向派生类的对象</li>
+</ol>
+</li>
+<li><p>虚函数</p>
+<ol>
+<li><p>存在一个虚函数表，虚函数表保存在.rodata段，只读数据段</p>
+</li>
+<li><p>每个对象的头部都保存了一个虚表指针，指向虚函数的地址</p>
+</li>
+<li><p>虚指针保存在什么地方，保存在头部或者尾部-为什么保存在头部或者尾部，因为是基类指针，指向派生类对象，如果放在中间的化，派生类先析构掉了，而基类就无法析构掉</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2·线程"><a href="#2·线程" class="headerlink" title="2·线程"></a>2·线程</h2><ol>
+<li>线程是程序执行的一种路径</li>
+<li>thread t创建一个线程</li>
+<li>Join和detach的区别<ol>
+<li>join是将线程加入到主线程中来，等待加入的线程结束，主线程再结束</li>
+<li>detach是将线程分离出去，不再管对应的线程</li>
+</ol>
+</li>
+</ol>
+<h2 id="3·进程"><a href="#3·进程" class="headerlink" title="3·进程"></a>3·进程</h2><p>进程就是一个正在运行的程序</p>
+<p>fork一个子进程怎么知道子进程是否结束–wait()获取子进程的退出码</p>
+<p>最后Init收养 孤儿（父进程先于子进程结束）进程</p>
+<h3 id="1·fork子进程和父进程的空间是否是同一块"><a href="#1·fork子进程和父进程的空间是否是同一块" class="headerlink" title="1·fork子进程和父进程的空间是否是同一块"></a>1·fork子进程和父进程的空间是否是同一块</h3><p>变量：子进程和父进程–是否是同一块内存不是同一块内存</p>
+<p>那为什么打印的内存地址是一样的~那是因为在底层中，物理内存会被分为多个页面，而变量的在页面中的偏移量是相同的，所以导致地址是相同的</p>
+<p>子进程和父进程只是拥有和父进程相同的页表，其中页表指向内存中的代码段部分不会改变，而指向数据段、堆栈，栈段的会再我们将要改变父子进程各自的这部分内容是使用时会将要操作的部分进行复制</p>
+<h2 id="4·进程间的通信方式"><a href="#4·进程间的通信方式" class="headerlink" title="4·进程间的通信方式"></a>4·进程间的通信方式</h2><ol>
+<li>管道：–写入管道的数据都在内存中<ul>
+<li>有名管道可以在任意进程间使用，无名主要在父子进程间使用</li>
+</ul>
+</li>
+<li>信号量–临界区资源同一是捷克，只允许一个进程或线程访问的资源<ul>
+<li>原子减1 P 获取资源，原子加1 V释放资源</li>
+</ul>
+</li>
+<li>共享内存–先在物理内存上申请一块空间，多个进程可以将其映射到自己的虚拟地址空间中–所做的改动可以立刻被其它进程看到<ul>
+<li>shamget（）用于创建或者获取共享内存</li>
+</ul>
+</li>
+<li>消息队列<ul>
+<li>消息队列中的内容时一个结构体  <ul>
+<li>第一个变量是  &gt;=1的</li>
+<li>后面的内容自定义</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="5·线程死锁"><a href="#5·线程死锁" class="headerlink" title="5·线程死锁"></a>5·线程死锁</h2><p>例如：相当于是 要学习A课程必须先学习C，而学习C课程要先学习A课程</p>
+<p>这样两个都在等待对方先释放资源，就形成了线程间的死锁</p>
+<h3 id="怎么在Linux下判断是否发生了线程死锁呢"><a href="#怎么在Linux下判断是否发生了线程死锁呢" class="headerlink" title="怎么在Linux下判断是否发生了线程死锁呢"></a>怎么在Linux下判断是否发生了线程死锁呢</h3><ol>
+<li>先通过ps 查看当前进程的运行状态和PID</li>
+<li>通过TOP 命令查看线程内每个线程的具体运行情况–线程进入阻塞状态CPU的占用率比较低，排序死循环的问题</li>
+<li>通过GDB调试，答应每个线程的调用堆栈信息–gdb attach 1953</li>
+<li></li>
+</ol>
+<h2 id="6·const-int-和int-const-的区别"><a href="#6·const-int-和int-const-的区别" class="headerlink" title="6·const int  和int const 的区别"></a>6·const int <em> 和int const </em>的区别</h2><ul>
+<li>const int *          const 修饰的是所指之物–即内容不可以改变</li>
+<li>int const *          cosnt 修饰的是指针变量–不能够指向其它对象</li>
+</ul>
+<h2 id="7·引用和指针的区别"><a href="#7·引用和指针的区别" class="headerlink" title="7·引用和指针的区别"></a>7·引用和指针的区别</h2><ol>
+<li>指针是存放某个对象的地址；而引用则是对象的别名</li>
+<li>程序为指针变量分配内存；引用不会分配内存</li>
+<li>指针解引用需要加* ；引用不需要</li>
+<li>指针可以指向不同的对象的地址；而引用只能绑定一个对象的地址，之后无法改变</li>
+<li>指针变量可以初始化为空；而引用没有所谓的空引用</li>
+<li>指针需要在作为形参的时候需要判断其合法性是否为空；引用不需要</li>
+<li>对指针sizeof（）得到的是指针的大小；对引用则是变量的大小</li>
+<li>指针可以有2级指针，3级指针；引用没有</li>
+<li>++指针是指向下个对象的地址；++引用则是作用于对象本身</li>
+<li>不可以对局部变量以指针或者引用的形式返回–声明周期</li>
+</ol>
+<p>如果从汇编角度来看–C++的引用底层就是调用的指针，引用时先获取该变量或者对象的地址，再进行对应的操作</p>
+<h2 id="8·string-底层实现原理"><a href="#8·string-底层实现原理" class="headerlink" title="8·string 底层实现原理"></a>8·string 底层实现原理</h2><h2 id="9·map的数据结构"><a href="#9·map的数据结构" class="headerlink" title="9·map的数据结构"></a>9·map的数据结构</h2><ul>
+<li>无序map–哈希表<ul>
+<li>哈希map主要由数组和链表组成，数组是hashmap的主体，链表主要是为了解决hash冲突而存在，如果定位到的数组位置不含链表，那么对于查很早，条件操作很快一次寻址，如果存在链表，对于添加操作，他的时间复杂度为o(n)</li>
+</ul>
+</li>
+<li>有序map–红黑树<ul>
+<li>按照字典序排序，查找的时间复杂度为Olog(n)</li>
+</ul>
+</li>
+</ul>
+<h2 id="10·智能指针"><a href="#10·智能指针" class="headerlink" title="10·智能指针"></a>10·智能指针</h2><h3 id="智能指针解决的问题"><a href="#智能指针解决的问题" class="headerlink" title="智能指针解决的问题"></a>智能指针解决的问题</h3><ul>
+<li>忘记释放资源，导致内存泄漏</li>
+<li>同一资源释放多次，导致释放野指针，程序崩溃</li>
+<li>写了释放资源代码，–中间return 掉了未执行到程序</li>
+<li>代码运行过程中发生异常，随着异常栈展开，导致释放 资源的代码未执行到</li>
+</ul>
+<h3 id="C-11中的智能指针"><a href="#C-11中的智能指针" class="headerlink" title="C++11中的智能指针"></a>C++11中的智能指针</h3><h3 id="不带计数引用的智能指针"><a href="#不带计数引用的智能指针" class="headerlink" title="不带计数引用的智能指针"></a>不带计数引用的智能指针</h3><ul>
+<li>auto_ptr–只有最后一个auto_ptr持有指针原来的资源，原来的auto_ptr都被赋予了nullptr<ul>
+<li>auto_ptr如果在容器中使用，那么进行拷贝之后，之前的指针为空，再次访问就成为空指针-程序奔溃</li>
+</ul>
+</li>
+<li>scoped_ptr–私有化了拷贝构造和operator=赋值函数，因此从根本上杜绝了浅拷贝的发生，所以scoped_ptr不能够用在容器中</li>
+<li>unique_ptr–unique_ptr去掉了拷贝构造函数和operator=赋值重载函数，禁止用户对unique_ptr进行显示的拷贝构造和赋值，防止智能指针浅拷贝问题的发生<ul>
+<li><strong>提供了带右值引用参数的拷贝构造和赋值</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="带引用计数的智能指针"><a href="#带引用计数的智能指针" class="headerlink" title="带引用计数的智能指针"></a>带引用计数的智能指针</h3><ul>
+<li>shared_ptr–保存在堆内存上<ul>
+<li>当允许多个智能指针指向同一个资源的时候，每个智能指针都会给资源的引用计数+1，当一个智能指针析构时，同样会使引用计数减去1，这样最后一个引用计数从1减到0的时候说明资源就该释放了</li>
+</ul>
+</li>
+<li>weak_ptr–弱指针指针只是观察者不计数，它的计数只是观察者的计数</li>
+</ul>
+<h3 id="智能指针的实现"><a href="#智能指针的实现" class="headerlink" title="智能指针的实现"></a>智能指针的实现</h3><h3 id="智能指针设计的原理"><a href="#智能指针设计的原理" class="headerlink" title="智能指针设计的原理"></a>智能指针设计的原理</h3><p>利用栈上的对象出作用域自动析构这个特点，再智能指针的析构函数中释放资源</p>
+<h3 id="智能指针的交叉引用"><a href="#智能指针的交叉引用" class="headerlink" title="智能指针的交叉引用"></a>智能指针的交叉引用</h3><ul>
+<li>定义对象时用强智能指针，用强智能指针，在其它地方引用时，使用弱智能指针</li>
+</ul>
+<h2 id="11·设计模式"><a href="#11·设计模式" class="headerlink" title="11·设计模式"></a>11·设计模式</h2><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><h2 id="12·strcpy-和memorcy的区别"><a href="#12·strcpy-和memorcy的区别" class="headerlink" title="12·strcpy 和memorcy的区别"></a>12·strcpy 和memorcy的区别</h2><h3 id="strcpy是按位进行拷贝–无法指定大小"><a href="#strcpy是按位进行拷贝–无法指定大小" class="headerlink" title="strcpy是按位进行拷贝–无法指定大小"></a>strcpy是按位进行拷贝–无法指定大小</h3><h3 id="memorcy是可以指定拷贝多大"><a href="#memorcy是可以指定拷贝多大" class="headerlink" title="memorcy是可以指定拷贝多大"></a>memorcy是可以指定拷贝多大</h3><h2 id="13·C-堆和栈的区别"><a href="#13·C-堆和栈的区别" class="headerlink" title="13·C++堆和栈的区别"></a>13·C++堆和栈的区别</h2><h3 id="栈-是由系统自动分配"><a href="#栈-是由系统自动分配" class="headerlink" title="栈-是由系统自动分配"></a>栈-是由系统自动分配</h3><h3 id="堆是由程序员控制"><a href="#堆是由程序员控制" class="headerlink" title="堆是由程序员控制"></a>堆是由程序员控制</h3><h2 id="14·C-的内存分为几个区"><a href="#14·C-的内存分为几个区" class="headerlink" title="14·C++的内存分为几个区"></a>14·C++的内存分为几个区</h2><ul>
+<li>代码区</li>
+<li>.data区–</li>
+</ul>
+<h2 id="15·什么是虚函数"><a href="#15·什么是虚函数" class="headerlink" title="15·什么是虚函数"></a>15·什么是虚函数</h2><h2 id="16·虚函数可以用在构造函数和析构函数上嘛"><a href="#16·虚函数可以用在构造函数和析构函数上嘛" class="headerlink" title="16·虚函数可以用在构造函数和析构函数上嘛"></a>16·虚函数可以用在构造函数和析构函数上嘛</h2><h2 id="17·new和malloc的区别"><a href="#17·new和malloc的区别" class="headerlink" title="17·new和malloc的区别"></a>17·new和malloc的区别</h2><h2 id="18·TCP中的三次握手，四次挥手，流量控制，拥塞控制"><a href="#18·TCP中的三次握手，四次挥手，流量控制，拥塞控制" class="headerlink" title="18·TCP中的三次握手，四次挥手，流量控制，拥塞控制"></a>18·TCP中的三次握手，四次挥手，流量控制，拥塞控制</h2><h3 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h3><ol>
+<li>利用滑动窗口来控制–避免发送速度过快，让对方来的急接收</li>
+</ol>
+<h3 id="拥塞控制-慢启动、拥塞避免、快速重传、快速恢复（防止过多的数据注入到网络中，避免出现网络负载过大的情况）"><a href="#拥塞控制-慢启动、拥塞避免、快速重传、快速恢复（防止过多的数据注入到网络中，避免出现网络负载过大的情况）" class="headerlink" title="拥塞控制-慢启动、拥塞避免、快速重传、快速恢复（防止过多的数据注入到网络中，避免出现网络负载过大的情况）"></a>拥塞控制-慢启动、拥塞避免、快速重传、快速恢复（防止过多的数据注入到网络中，避免出现网络负载过大的情况）</h3><ol>
+<li>传数据的时候从-小的开始-逐步增大–当网络出现拥塞时–执行慢算法-从1开始</li>
+<li>当发送方连续收到三个重复确认时，执行乘法减小</li>
+</ol>
+<h2 id="19·socket网络编程的基本流程"><a href="#19·socket网络编程的基本流程" class="headerlink" title="19·socket网络编程的基本流程"></a>19·socket网络编程的基本流程</h2><h3 id="TCP服务端的编程流程是："><a href="#TCP服务端的编程流程是：" class="headerlink" title="TCP服务端的编程流程是："></a>TCP服务端的编程流程是：</h3><ol>
+<li>创建一个socket，用函数socket();</li>
+<li>设置socket属性，用函数setsocket();</li>
+<li>绑定IP地址，端口等信息到socket上，用bind（）</li>
+<li>开启监听，用函数Listen()</li>
+<li>接收客户端的数据用accept();</li>
+<li>收发数据，用函数send()和recv()</li>
+<li>关闭网络连接</li>
+<li>关闭监听</li>
+</ol>
+<h3 id="TCP客户端的基本流程"><a href="#TCP客户端的基本流程" class="headerlink" title="TCP客户端的基本流程"></a>TCP客户端的基本流程</h3><ol>
+<li>设置socket属性，用函数setsocket();</li>
+<li>绑定IP地址，端口等信息到socket上，用bind（）</li>
+<li>设置要连接的对方的IP地址和端口属性</li>
+<li>连接服务器，用connect()</li>
+<li>发送数据，用函数send()和recv()</li>
+<li>关闭网络连接、</li>
+</ol>
+<h2 id="20·IO-复用函数，poll-epoll的区别以"><a href="#20·IO-复用函数，poll-epoll的区别以" class="headerlink" title="20·IO 复用函数，poll,epoll的区别以"></a>20·IO 复用函数，poll,epoll的区别以</h2><h2 id="21·线程间的同步方式"><a href="#21·线程间的同步方式" class="headerlink" title="21·线程间的同步方式"></a>21·线程间的同步方式</h2><h3 id="线程互质"><a href="#线程互质" class="headerlink" title="线程互质"></a>线程互质</h3><ol>
+<li>互斥锁</li>
+<li>原子操作</li>
+</ol>
+<h3 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h3><ol>
+<li>信号量</li>
+<li>条件变量</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://wenkehan.github.io">kexi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://wenkehan.github.io/2022/10/28/%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%8D%8E%E7%94%B5%E8%AF%9D%E7%AC%AC%E4%B8%80%E8%BD%AE%E9%9D%A2%E8%AF%95/">http://wenkehan.github.io/2022/10/28/%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%8D%8E%E7%94%B5%E8%AF%9D%E7%AC%AC%E4%B8%80%E8%BD%AE%E9%9D%A2%E8%AF%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://wenkehan.github.io" target="_blank">柯西HOME</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg"/></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/10/27/%E6%9D%82%E8%AE%B0/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">杂记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">C++的基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%C2%B7%E5%A4%9A%E6%80%81"><span class="toc-number">1.1.</span> <span class="toc-text">1·多态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%C2%B7%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2·线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%C2%B7%E8%BF%9B%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">3·进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%C2%B7fork%E5%AD%90%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%88%B6%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%A9%BA%E9%97%B4%E6%98%AF%E5%90%A6%E6%98%AF%E5%90%8C%E4%B8%80%E5%9D%97"><span class="toc-number">1.3.1.</span> <span class="toc-text">1·fork子进程和父进程的空间是否是同一块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%C2%B7%E8%BF%9B%E7%A8%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-number">1.4.</span> <span class="toc-text">4·进程间的通信方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%C2%B7%E7%BA%BF%E7%A8%8B%E6%AD%BB%E9%94%81"><span class="toc-number">1.5.</span> <span class="toc-text">5·线程死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%9C%A8Linux%E4%B8%8B%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%8F%91%E7%94%9F%E4%BA%86%E7%BA%BF%E7%A8%8B%E6%AD%BB%E9%94%81%E5%91%A2"><span class="toc-number">1.5.1.</span> <span class="toc-text">怎么在Linux下判断是否发生了线程死锁呢</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%C2%B7const-int-%E5%92%8Cint-const-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.6.</span> <span class="toc-text">6·const int  和int const 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%C2%B7%E5%BC%95%E7%94%A8%E5%92%8C%E6%8C%87%E9%92%88%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.7.</span> <span class="toc-text">7·引用和指针的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%C2%B7string-%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">1.8.</span> <span class="toc-text">8·string 底层实现原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%C2%B7map%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.9.</span> <span class="toc-text">9·map的数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%C2%B7%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">1.10.</span> <span class="toc-text">10·智能指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.10.1.</span> <span class="toc-text">智能指针解决的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-11%E4%B8%AD%E7%9A%84%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">1.10.2.</span> <span class="toc-text">C++11中的智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%B8%A6%E8%AE%A1%E6%95%B0%E5%BC%95%E7%94%A8%E7%9A%84%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">1.10.3.</span> <span class="toc-text">不带计数引用的智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E7%9A%84%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">1.10.4.</span> <span class="toc-text">带引用计数的智能指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.10.5.</span> <span class="toc-text">智能指针的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.10.6.</span> <span class="toc-text">智能指针设计的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E7%9A%84%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8"><span class="toc-number">1.10.7.</span> <span class="toc-text">智能指针的交叉引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%C2%B7%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.11.</span> <span class="toc-text">11·设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.11.1.</span> <span class="toc-text">单例模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.11.2.</span> <span class="toc-text">工厂模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%C2%B7strcpy-%E5%92%8Cmemorcy%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.12.</span> <span class="toc-text">12·strcpy 和memorcy的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#strcpy%E6%98%AF%E6%8C%89%E4%BD%8D%E8%BF%9B%E8%A1%8C%E6%8B%B7%E8%B4%9D%E2%80%93%E6%97%A0%E6%B3%95%E6%8C%87%E5%AE%9A%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.12.1.</span> <span class="toc-text">strcpy是按位进行拷贝–无法指定大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#memorcy%E6%98%AF%E5%8F%AF%E4%BB%A5%E6%8C%87%E5%AE%9A%E6%8B%B7%E8%B4%9D%E5%A4%9A%E5%A4%A7"><span class="toc-number">1.12.2.</span> <span class="toc-text">memorcy是可以指定拷贝多大</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%C2%B7C-%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.13.</span> <span class="toc-text">13·C++堆和栈的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%88-%E6%98%AF%E7%94%B1%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%8A%A8%E5%88%86%E9%85%8D"><span class="toc-number">1.13.1.</span> <span class="toc-text">栈-是由系统自动分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A0%86%E6%98%AF%E7%94%B1%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8E%A7%E5%88%B6"><span class="toc-number">1.13.2.</span> <span class="toc-text">堆是由程序员控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%C2%B7C-%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E4%B8%BA%E5%87%A0%E4%B8%AA%E5%8C%BA"><span class="toc-number">1.14.</span> <span class="toc-text">14·C++的内存分为几个区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%C2%B7%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">1.15.</span> <span class="toc-text">15·什么是虚函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16%C2%B7%E8%99%9A%E5%87%BD%E6%95%B0%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%9C%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E4%B8%8A%E5%98%9B"><span class="toc-number">1.16.</span> <span class="toc-text">16·虚函数可以用在构造函数和析构函数上嘛</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17%C2%B7new%E5%92%8Cmalloc%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.17.</span> <span class="toc-text">17·new和malloc的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18%C2%B7TCP%E4%B8%AD%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%EF%BC%8C%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="toc-number">1.18.</span> <span class="toc-text">18·TCP中的三次握手，四次挥手，流量控制，拥塞控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">1.18.1.</span> <span class="toc-text">流量控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6-%E6%85%A2%E5%90%AF%E5%8A%A8%E3%80%81%E6%8B%A5%E5%A1%9E%E9%81%BF%E5%85%8D%E3%80%81%E5%BF%AB%E9%80%9F%E9%87%8D%E4%BC%A0%E3%80%81%E5%BF%AB%E9%80%9F%E6%81%A2%E5%A4%8D%EF%BC%88%E9%98%B2%E6%AD%A2%E8%BF%87%E5%A4%9A%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B3%A8%E5%85%A5%E5%88%B0%E7%BD%91%E7%BB%9C%E4%B8%AD%EF%BC%8C%E9%81%BF%E5%85%8D%E5%87%BA%E7%8E%B0%E7%BD%91%E7%BB%9C%E8%B4%9F%E8%BD%BD%E8%BF%87%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%89"><span class="toc-number">1.18.2.</span> <span class="toc-text">拥塞控制-慢启动、拥塞避免、快速重传、快速恢复（防止过多的数据注入到网络中，避免出现网络负载过大的情况）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19%C2%B7socket%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-number">1.19.</span> <span class="toc-text">19·socket网络编程的基本流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BC%96%E7%A8%8B%E6%B5%81%E7%A8%8B%E6%98%AF%EF%BC%9A"><span class="toc-number">1.19.1.</span> <span class="toc-text">TCP服务端的编程流程是：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="toc-number">1.19.2.</span> <span class="toc-text">TCP客户端的基本流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20%C2%B7IO-%E5%A4%8D%E7%94%A8%E5%87%BD%E6%95%B0%EF%BC%8Cpoll-epoll%E7%9A%84%E5%8C%BA%E5%88%AB%E4%BB%A5"><span class="toc-number">1.20.</span> <span class="toc-text">20·IO 复用函数，poll,epoll的区别以</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21%C2%B7%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F"><span class="toc-number">1.21.</span> <span class="toc-text">21·线程间的同步方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E4%BA%92%E8%B4%A8"><span class="toc-number">1.21.1.</span> <span class="toc-text">线程互质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="toc-number">1.21.2.</span> <span class="toc-text">信号量</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By kexi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
