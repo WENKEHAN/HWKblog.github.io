@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>git 的日常使用</title>
+      <link href="/2023/01/10/git-%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/"/>
+      <url>/2023/01/10/git-%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<h3 id="库上代码下载到本地–怎么再次进行提交"><a href="#库上代码下载到本地–怎么再次进行提交" class="headerlink" title="库上代码下载到本地–怎么再次进行提交"></a>库上代码下载到本地–怎么再次进行提交</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp">cherry pick 到本地之后<br>使用<br>git log查看日志<br>回到刚才commit信息的上一笔的commit<br>git reset commitID<br></code></pre></td></tr></table></figure><h3 id="如何让同一工程下的多个上库链接只跑一次门禁"><a href="#如何让同一工程下的多个上库链接只跑一次门禁" class="headerlink" title="如何让同一工程下的多个上库链接只跑一次门禁"></a>如何让同一工程下的多个上库链接只跑一次门禁</h3><p><mark>在commit的时候加上 同一个change-Id,在这里要注意–一定也要加上 change_Id</mark></p><h3 id="如何快速的追加代码以及将代码添加到工作区"><a href="#如何快速的追加代码以及将代码添加到工作区" class="headerlink" title="如何快速的追加代码以及将代码添加到工作区"></a>如何快速的追加代码以及将代码添加到工作区</h3><ol><li><p>如果当前的 仓库 git status 下已修改的都是要推上库的代码，那么可以使用 </p><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">git add -A<br></code></pre></td></tr></table></figure></li><li><p>如果要给已上库的代码修改了之后，进行追加怎么办</p><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">通过git <span class="hljs-built_in">log</span> 查看有没有自己的commit信息<br>如果有可以使用 <br>git commit --amend来进行对应的追加<br></code></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git 常用命令与技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>尽可能的使用const</title>
       <link href="/2022/12/03/%E5%B0%BD%E5%8F%AF%E8%83%BD%E7%9A%84%E4%BD%BF%E7%94%A8const/"/>
       <url>/2022/12/03/%E5%B0%BD%E5%8F%AF%E8%83%BD%E7%9A%84%E4%BD%BF%E7%94%A8const/</url>
