@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>尽可能的使用const</title>
+      <link href="/2022/12/03/%E5%B0%BD%E5%8F%AF%E8%83%BD%E7%9A%84%E4%BD%BF%E7%94%A8const/"/>
+      <url>/2022/12/03/%E5%B0%BD%E5%8F%AF%E8%83%BD%E7%9A%84%E4%BD%BF%E7%94%A8const/</url>
+      
+        <content type="html"><![CDATA[<h2 id="const-语法的使用"><a href="#const-语法的使用" class="headerlink" title="const 语法的使用"></a><mark><strong>const 语法的使用</strong></mark></h2><ol><li>如果关键字const出现在*左边表示所指之物为常量</li><li>如果关键字出现在*右边，表示指针自身式常量</li><li>如果出现在*两边，表示被指物和指针两者都是常量</li></ol><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">char</span> gretting [] = <span class="hljs-string">&quot;Hello&quot;</span>;<br><span class="hljs-type">char</span>* p = gretting; <span class="hljs-comment">//non -const pointer,non -const data</span><br><span class="hljs-type">const</span> <span class="hljs-type">char</span>* p=gretting;<span class="hljs-comment">//non -const pointer ,const data</span><br><span class="hljs-type">char</span>* <span class="hljs-type">const</span> p=gretting;<span class="hljs-comment">//const pointer , non const data</span><br><span class="hljs-type">const</span> <span class="hljs-type">char</span>* <span class="hljs-type">const</span> p=gretting;<span class="hljs-comment">//const pinter,const data</span><br></code></pre></td></tr></table></figure><h2 id="const-成员函数"><a href="#const-成员函数" class="headerlink" title="const 成员函数"></a>const 成员函数</h2><ol><li><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol><li>使得class的接口比较容易理解，可以得知那个函数可以改动对象，哪个函数不行</li><li>他们使得 ==操作const 对象成为可能==</li></ol></li></ol><h2 id="经验之谈"><a href="#经验之谈" class="headerlink" title="经验之谈"></a>经验之谈</h2><p>==令函数返回一个常量值，往往可以降低因客户错误而造成的意外，而又不至于放弃安全性和高效性==</p><p>举例说明</p><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Rational</span>&#123;&#125;;<br><span class="hljs-type">const</span> Rational <span class="hljs-keyword">operator</span>* (<span class="hljs-type">const</span> Rational &amp;lhs, <span class="hljs-type">const</span> Rational &amp;rhs);<br>Rational a,b,c;<br>(a * b)=c;<br></code></pre></td></tr></table></figure><p>当用户在这里想进行比较的时候，而进行了一个赋值操作，如果不加const 则这个操作则不会产生错误，而我们自己写的类与内置类型要保持一致，所以在这里我们需要加上 ==const==加以限制</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> effectiveC++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++高效开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>条款02</title>
       <link href="/2022/11/20/%E6%9D%A1%E6%AC%BE02/"/>
       <url>/2022/11/20/%E6%9D%A1%E6%AC%BE02/</url>
