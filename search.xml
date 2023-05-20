@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>C++中的RAII以及智能指针</title>
+      <link href="/2023/05/19/C-%E4%B8%AD%E7%9A%84RAII%E4%BB%A5%E5%8F%8A%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"/>
+      <url>/2023/05/19/C-%E4%B8%AD%E7%9A%84RAII%E4%BB%A5%E5%8F%8A%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RAII-思想"><a href="#RAII-思想" class="headerlink" title="RAII 思想"></a>RAII 思想</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">shape_wrapper</span> &#123;<br>    <span class="hljs-comment">//explicit关键字的作用就是防止类构造函数的隐式自动转换</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">shape_wrapper</span><span class="hljs-params">(</span></span><br><span class="hljs-params"><span class="hljs-function">        shape* ptr = <span class="hljs-literal">nullptr</span>)</span></span><br><span class="hljs-function">        : ptr_(ptr) &#123;</span>&#125;<br>    ~<span class="hljs-built_in">shape_wrapper</span>()<br>    &#123;<br>        <span class="hljs-keyword">delete</span> ptr_;<br>    &#125;<br>    <span class="hljs-function">shape* <span class="hljs-title">get</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123; <span class="hljs-keyword">return</span> ptr_; &#125;<br><br><span class="hljs-keyword">private</span>:<br>    shape* ptr_;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 智能指针 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git 的日常使用</title>
       <link href="/2023/01/10/git-%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/"/>
       <url>/2023/01/10/git-%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</url>
