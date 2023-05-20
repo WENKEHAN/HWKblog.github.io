@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>C++基础类型转换</title>
+      <link href="/2023/05/20/C-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
+      <url>/2023/05/20/C-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+      
+        <content type="html"><![CDATA[<p>转换：convert</p><p>==类型所表示的值的范围决定了转换的过程==</p><p> 当我们赋给无符号类型一个超出它表示范围的值时，结果是初始值对无符号类型表示数值总数取模后的余数</p><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> i = <span class="hljs-number">-1</span>;<br><span class="hljs-type">unsigned</span> <span class="hljs-type">char</span> c = <span class="hljs-number">0</span>;<br>c = i;<br>cout &lt;&lt; (<span class="hljs-type">int</span>)c &lt;&lt; endl;<br><span class="hljs-comment">//unsinged char 可以表示 0至255区间内的值- 可以表示256个数</span><br></code></pre></td></tr></table></figure><p><img src="https://gitee.com/hanwenke/blogimage/raw/master/img/202305202103880.png" alt="image-20230520210304779"></p><h2 id="含有无符号类型的表达式"><a href="#含有无符号类型的表达式" class="headerlink" title="含有无符号类型的表达式"></a>含有无符号类型的表达式</h2><p><em>有符号数与无符号数做运算时，会先将有符号数转换成为无符号数，再进行运算</em></p><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">unsigned</span> u = <span class="hljs-number">10</span>;<br><span class="hljs-type">int</span> i = <span class="hljs-number">-42</span>;<br>cout &lt;&lt; <span class="hljs-built_in">uint32_t</span>(i) &lt;&lt; endl;<br>cout &lt;&lt; u + i;<br></code></pre></td></tr></table></figure><p><img src="https://gitee.com/hanwenke/blogimage/raw/master/img/202305202119287.png" alt="image-20230520211937258"></p><p><strong>提示：切勿混用带符号类型和无符号类型</strong></p><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">define</span> min(a,b)((a)&lt;=(b)?(a):(b))</span><br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 类型转换 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++中的RAII以及智能指针</title>
+      <link href="/2023/05/19/C-%E4%B8%AD%E7%9A%84RAII%E4%BB%A5%E5%8F%8A%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"/>
+      <url>/2023/05/19/C-%E4%B8%AD%E7%9A%84RAII%E4%BB%A5%E5%8F%8A%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RAII-思想"><a href="#RAII-思想" class="headerlink" title="RAII 思想"></a>RAII 思想</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">shape_wrapper</span> &#123;<br>    <span class="hljs-comment">//explicit关键字的作用就是防止类构造函数的隐式自动转换</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">shape_wrapper</span><span class="hljs-params">(</span></span><br><span class="hljs-params"><span class="hljs-function">        shape* ptr = <span class="hljs-literal">nullptr</span>)</span></span><br><span class="hljs-function">        : ptr_(ptr) &#123;</span>&#125;<br>    ~<span class="hljs-built_in">shape_wrapper</span>()<br>    &#123;<br>        <span class="hljs-keyword">delete</span> ptr_;<br>    &#125;<br>    <span class="hljs-function">shape* <span class="hljs-title">get</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>&#123; <span class="hljs-keyword">return</span> ptr_; &#125;<br><br><span class="hljs-keyword">private</span>:<br>    shape* ptr_;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 智能指针 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git 的日常使用</title>
       <link href="/2023/01/10/git-%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/"/>
       <url>/2023/01/10/git-%E7%9A%84%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8/</url>
@@ -169,7 +219,7 @@
     
     
     <entry>
-      <title>那些每秒的词句</title>
+      <title>那些美妙的词句</title>
       <link href="/2022/11/06/%E7%BE%8E%E5%A6%99%E7%9A%84%E5%8F%A5%E5%AD%90/"/>
       <url>/2022/11/06/%E7%BE%8E%E5%A6%99%E7%9A%84%E5%8F%A5%E5%AD%90/</url>
       
